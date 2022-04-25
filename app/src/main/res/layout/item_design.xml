@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#ffffff">
+
+    <!-- for using images(circular shape or any shape) we have to use cardview -->
+
+    <!-- to get circle shape always remember to give same cardCornerRadius as same as width and height -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Suraj"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="4:00am"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/textView1"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="how are you?"
+            android:textSize="15sp" />
+
+        <!-- for displaying divider line -->
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="412dp"
+            android:layout_height="18dp"
+            android:layout_below="@+id/imageView"
+            android:layout_marginLeft="-80dp"
+            android:layout_marginTop="-3dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="_________________________________________"
+            android:textColor="#CDC7C7" />
+    </RelativeLayout>
+</RelativeLayout>
